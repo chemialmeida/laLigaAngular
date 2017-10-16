@@ -1,0 +1,31 @@
+<section class="clasificacion">
+  <header>
+    <h2>{{title}}</h2>
+  </header>
+  <table>
+    <tr>
+      <th title="Position" class="Position">#</th>
+      <th title="Team_name" class="team"> Equipos </th>
+      <th title="Games" class="played"> JJ </th>
+      <th title="Games_wins" class="wins"> JG </th>
+      <th title="Games_draws" class="draws"> JE </th>
+      <th title="Games_loss" class="loss"> JP </th>
+      <th title="Goals for" class="favor"> GF </th>
+      <th title="Goals against" class="contra"> GC </th>
+      <th title="Goals average" class="avg"> GA </th>
+      <th title="Points" class="pts"> PTS </th>
+    </tr>
+    <tr *ngFor="let team of equipos | orderBy: order: reverse">
+      <td class="Position">{{ team.Position }}</td>
+      <td class="team">{{ team.name }}</td>
+      <td class="played">{{ team.JJ }}</td>
+      <td class="wins">{{ team.JG }}</td>
+      <td class="draws">{{ team.JE }}</td>
+      <td class="loss">{{ team.JP }}</td>
+      <td class="favor">{{ team.GF }}</td>
+      <td class="contra">{{ team.GC }}</td>
+      <td class="avg">{{ team.GA }}</td>
+      <td class="pts">{{ team.PTS }}</td>
+    </tr>
+  </table>
+</section>
